@@ -13,7 +13,6 @@
                 <div class="form-holder">
                     <div class="form-content">
                         <div class="form-items">
-                            {{-- <form method="POST" class="requires-validation" novalidate> --}}
                             {!! Form::open(['url' => url('validate/url'), 'method' => 'POST', 'class' => 'requires-validation', 'novalidate' => 'novalidate']) !!}
                                 <div class="col-md-12">
                                    <input
@@ -23,6 +22,9 @@
                                     placeholder="Type url here"
                                     pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"
                                     required>
+                                    @if($errors->has('url'))
+                                        <div class="error">{{ $errors->first('url') }}</div>
+                                    @endif
                                     <div class="valid-feedback">URL field is valid!</div>
                                     <div class="invalid-feedback">Please enter valid URL!</div>
                                 </div>

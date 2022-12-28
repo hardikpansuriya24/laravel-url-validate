@@ -10,8 +10,12 @@ class TestController extends Controller
 {
     public function validateUrl(Request $request) {
 
+        $validated = $request->validate([
+            'url' => 'required|url',
+        ]);
+
         $response = rescue(function () use($request) {
-            return Http::retry(3, 1000)->get($request->url);
+            return Http::retry(3, 500)->get($request->url);
         }, function ($exception) {
             return $exception instanceof ConnectionException;
         });
