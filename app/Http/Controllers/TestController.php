@@ -15,7 +15,7 @@ class TestController extends Controller
         ]);
 
         $response = rescue(function () use($request) {
-            return Http::retry(3, 500)->get($request->url);
+            return Http::retry(110, 500)->get($request->url);
         }, function ($exception) {
             return $exception instanceof ConnectionException;
         });
