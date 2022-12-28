@@ -20,10 +20,10 @@ After composer packages installed in your local machine. then need to run
 ## Response
 
 - If url found and we connect successfully then we get following response.
--   ![image](https://user-images.githubusercontent.com/118823606/209770657-44210724-6956-4f8b-b52e-087102236c1a.png)
+  ![image](https://user-images.githubusercontent.com/118823606/209770657-44210724-6956-4f8b-b52e-087102236c1a.png)
 
 
 - If url not found then it will retun with false.
--   ![image](https://user-images.githubusercontent.com/118823606/209770727-6aaa2bf4-2292-44b1-8193-3ff5669c0878.png)
+  ![image](https://user-images.githubusercontent.com/118823606/209770727-6aaa2bf4-2292-44b1-8193-3ff5669c0878.png)
 
 
