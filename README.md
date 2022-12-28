@@ -16,8 +16,10 @@ After composer packages installed in your local machine. then need to run
 - There i used Http client library for get url details.
 - rescue function is used for wrapper around the HTTP request for always receive a response object and can safely go ahead to verify its status.
 - retry function is used for HTTP client to automatically retry the request if a client or server error occurs.  The retry method accepts the maximum number of times the request should be attempted and the number of milliseconds.
+- NOTE FOR Retry : One important aspect of PHP programs is that the maximum time taken to execute a script is 30 seconds. The time limit varies depending on the hosting companies but the maximum execution time is between 30 to 60 seconds so we can set retry count as per limit and buffer time.
 
-## NOTE FOR Retry : One important aspect of PHP programs is that the maximum time taken to execute a script is 30 seconds. The time limit varies depending on the hosting companies but the maximum execution time is between 30 to 60 seconds so we can set retry count as per limit and buffer time
+## Local php.ini configrations 
+- In my local machin max_execution_time is 60 seconds. so i can retry 110 time in one request.
 
 ## Response
 
